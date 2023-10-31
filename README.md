@@ -12,4 +12,7 @@ For windows
 4. pip install -r requirements.txt
 5. to run the application:- flask --app api run --debug
 
-
+Create migrations:
+Note:- Migrations are needed to create data or edit or delete columns in the database
+alley migrations create <name>
+alley migrations create room_type

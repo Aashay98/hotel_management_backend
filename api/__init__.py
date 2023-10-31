@@ -25,5 +25,4 @@ def create_app(test_config=None):
 
     #run app in debug mode
     app.debug = app.config['FL_DEBUG']
-
     return app

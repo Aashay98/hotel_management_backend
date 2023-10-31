@@ -1,19 +1,16 @@
-# def configure(app):
-#     app.add_url_rule('/guest/login',
-#                         view_func=retrieve_all_movie_data,
-#                         methods=['POST'])
-#     app.add_url_rule('/staff/login',
-#                         view_func=retrieve_all_movie_data,
-#                         methods=['POST'])
-#     app.add_url_rule('/guest/change_password',
-#                         view_func=retrieve_all_movie_data,
-#                         methods=['POST'])
-#     app.add_url_rule('/staff/change_password',
-#                         view_func=retrieve_movie_data_by_title,
-#                         methods=['POST'])
-#     app.add_url_rule('/guest/reset_password',
-#                         view_func=update_movie_data,
-#                         methods=['POST'])
-#     app.add_url_rule('/staff/reset_password',
-#                         view_func=update_movie_data,
-#                         methods=['POST'])
+from api.services.authentication import change_password, login, reset_password, signup
+
+
+def configure(app):
+    app.add_url_rule('/login',
+                        view_func=login,
+                        methods=['POST'])
+    app.add_url_rule('/change_password',
+                        view_func=change_password,
+                        methods=['POST'])
+    app.add_url_rule('/reset_password',
+                        view_func=reset_password,
+                        methods=['POST'])
+    app.add_url_rule('/signup',
+                        view_func=signup,
+                        methods=['POST'])

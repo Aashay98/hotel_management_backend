@@ -18,6 +18,8 @@ ME_CONNECT_OPTS = {
     'password':'12345',
     'host': 'mongodb://admin:qwerty@localhost/production',
 """
+SENDER_EMAIL = "noreplyhotelproject@gmail.com"
+SENDER_EMAIL_PASSWORD = "projectADB@23"
 
 CORS_ALLOWED = []
 CORS_HEADERS = ['Public-Session', 'CSRF-Token', 'Content-Disposition']
