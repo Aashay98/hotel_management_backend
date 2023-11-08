@@ -14,11 +14,9 @@ def create_app(test_config=None):
     db = connect(**app.config['ME_CONNECT_OPTS'])
     app.config['primary_datastore'] = db[app.config['ME_CONNECT_OPTS']['db']]
     #cors config
-    CORS(app, supports_credentials=True, resources={
-        r"/api/*": {"origins": "*", 'expose_headers': settings.CORS_HEADERS},
-    })
+    CORS(app, supports_credentials=True)
     #configure the rest endpoints - TODO
-    #auth.configure(app)
+    auth.configure(app)
     #reservation.configure(app)
     #rooms.configure(app)
     #user.configure(app)
