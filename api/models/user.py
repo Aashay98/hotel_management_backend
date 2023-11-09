@@ -20,12 +20,28 @@ class Admin(Document):
                             default=['delete_staff',
                                      'assign_persimssions',
                                      'create_staff',
-                                     'change_reservations',
+                                     'view_staff',
+                                     'edit_staff',
+                                     'add_reservation'
+                                     'change_reservation',
+                                     'delete_reservation',
+                                     'view_reservation',
                                      'charge_customers',
-                                     'assign_rooms',
-                                     'change_rooms',
+                                     'change_customer_room',
+                                     'add_room',
+                                     'change_room'
+                                     'delete_room',
+                                     'view_room',
+                                     'assign_customer_room',
+                                     'add_customer',
+                                     'view_customer'
+                                     'delete_customer',
+                                     'edit_customer',
+                                     'add_payments',
+                                     'edit_payments',
+                                     'view_payments',
                                      'extra_charge_customers',
-                                     'refund_customers'])
+                                     'refund_payments'])
 
 
 class Staff(Document):
@@ -39,10 +55,24 @@ class Staff(Document):
     modified = DateTimeField()
     role = StringField(default='front_desk')
     permissions = ListField(StringField(),
-                            default=['change_reservations',
-                                    'charge_customers',
-                                     'assign_rooms',
-                                     'change_rooms',
+                            default=['add_reservation'
+                                     'change_reservation',
+                                     'delete_reservation',
+                                     'view_reservation',
+                                     'charge_customers',
+                                     'change_customer_room',
+                                     'add_room',
+                                     'change_room'
+                                     'delete_room',
+                                     'view_room',
+                                     'assign_customer_room',
+                                     'add_customer',
+                                     'view_customer'
+                                     'delete_customer',
+                                     'edit_customer',
+                                     'add_payments',
+                                     'edit_payments',
+                                     'view_payments',
                                      'extra_charge_customers',
                                      'refund_customers'])
 
